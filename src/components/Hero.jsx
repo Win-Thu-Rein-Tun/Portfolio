@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import Typewriter from "typewriter-effect";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
@@ -20,11 +21,20 @@ const Hero = () => {
             <span className="own-text-gradient hidden ss:inline-block">
               Sun D Shine
             </span>
-            <span className="text-[#915eff] ss:hidden">S.D.S</span>
+            <span className="own-text-gradient ss:hidden">S.D.S</span>
           </h1>
-          <p className={`${styles.heroSubText}`}>
-            Transforming Your Ideas into <br className="sm:block hidden" />
-            Fully Functional Websites & Mobile Application
+          <p
+            className={`${styles.heroSubText} lg:max-w-lg md:max-w-md sm:max-w-sm`}
+          >
+            <Typewriter
+              options={{
+                strings: [
+                  "Transforming Your Ideas into Fully Functional Websites & Mobile Application",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </p>
         </div>
       </div>
