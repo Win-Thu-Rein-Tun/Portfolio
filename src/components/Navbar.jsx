@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-30 bg-primary ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-30 ${
+        scrolled ? "bg-black" : "bg-transparent"
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -65,13 +65,13 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="rs-noti"
-            onClick={() => setToggle(!toggle)}
+            onClick={() => setToggle((prev) => !prev)}
             className="cursor-pointer w-[28px] h-[28px] object-contain"
           />
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } absolute black-gradient top-20 right-0 p-6 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } absolute black-gradient top-20 right-0 p-6 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           >
             <ul className="list-none flex flex-col justify-end items-start gap-4">
               {navLinks.map((link) => (
@@ -79,7 +79,7 @@ const Navbar = () => {
                   key={link.id}
                   className={`
                 ${
-                  active === link.title ? "text-white" : "text-secondary"
+                  active === link.title ? "text-greeny" : "text-secondary"
                 } text-[16px] font-medium font-poppins cursor-pointer`}
                   onClick={() => {
                     setToggle(!toggle);
