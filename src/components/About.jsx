@@ -3,12 +3,17 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { staggerContainer, fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
 const About = () => {
   return (
-    <>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.5 }}
+    >
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -30,7 +35,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </motion.div>
   );
 };
 
@@ -50,7 +55,7 @@ const ServiceCard = ({ index, title, icon }) => {
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
         >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">
+          <h3 className="text-white text-[22px] font-bold text-center">
             {title}
           </h3>
         </div>
