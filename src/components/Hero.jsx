@@ -15,7 +15,7 @@ const Hero = () => {
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#00ff00]"></div>
-          <div className="w-1 sm:h-80 h-40 own-gradient"></div>
+          <div className="w-1 sm:h-[220px] h-40 own-gradient"></div>
         </div>
 
         <div>
