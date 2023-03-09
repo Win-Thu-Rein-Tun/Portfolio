@@ -12,12 +12,24 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
+
 .own-text-gradient {
   background: #00ff00;
   background: linear-gradient(to right, #00ff00 0%, #00ffff 78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.own-gradient {
+  background: #00ff00;
+  background: linear-gradient(-90deg, #00ff00 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #00ff00 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
