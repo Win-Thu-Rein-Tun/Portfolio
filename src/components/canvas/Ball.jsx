@@ -13,7 +13,7 @@ const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
+    <Float speed={3} rotationIntensity={0} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.5]} />
       <mesh castShadow receiveShadow position={[0, -0.5, 0]} scale={2.75}>
@@ -25,9 +25,9 @@ const Ball = (props) => {
           flatShading
         />
         <Decal
-          position={[0, 0, 2]}
+          position={[-0.17, 0.07, 0]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={[2.8, 2.5, 100]}
+          scale={[2.8, 2.2, 100]}
           map={decal}
           flatShading
         />
@@ -40,7 +40,13 @@ const BallCanvas = ({ icon }) => {
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls autoRotate autoRotateSpeed={2.5} enableZoom={false} />
+        <OrbitControls
+          autoRotate
+          autoRotateSpeed={3}
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <Ball imgUrl={icon} />
       </Suspense>
       <Preload all />
