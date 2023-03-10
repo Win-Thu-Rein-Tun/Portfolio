@@ -1,103 +1,96 @@
 import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
+import { useState } from "react";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false }}
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      className={`relative ${
+        active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
+      } flex items-center justify-center min-w-[80px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
+      onClick={() => handleClick(id)}
     >
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-
-          <div className="absolute inset-0 flex justify-end m-3">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+      <img
+        src={imgUrl}
+        alt="planet-04"
+        className="absolute w-full h-full object-cover rounded-[24px]"
+      />
+      {active !== id ? (
+        <div className="absolute items-center bottom-0 lg:h-[150px] h-[0] p-8 flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+          <h3 className="font-semibold sm:text-[20px] text-[18px] text-white absolute z-0 lg:bottom-10 lg:rotate-[-90deg] lg:origin-[0,0]">
+            {title}
+          </h3>
+        </div>
+      ) : (
+        <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+          <div
+            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
+          >
+            <img
+              src={github}
+              alt="Github"
+              className="w-1/2 h-1/2 object-contain"
+            />
           </div>
+          <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
+            Enter Metaverse
+          </p>
+          <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+            {title}
+          </h2>
         </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
+      )}
     </motion.div>
   );
 };
 
 const Works = () => {
+  const [active, setActive] = useState("project-3");
+
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <motion.div variants={textVariant()}>
+          <p className={`${styles.sectionSubText} `}>My work</p>
+          <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        </motion.div>
+
+        <div className="w-full flex">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          >
+            Following projects showcases my skills and experience through
+            real-world examples of my work. Each project is briefly described
+            with links to code repositories and live demos in it. It reflects my
+            ability to solve complex problems, work with different technologies,
+            and manage projects effectively.
+          </motion.p>
+        </div>
+
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              {...project}
+              index={index}
+              active={active}
+              handleClick={setActive}
+            />
+          ))}
+        </div>
       </motion.div>
-
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
-      </div>
-
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
     </>
   );
 };

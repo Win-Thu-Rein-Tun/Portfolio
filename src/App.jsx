@@ -21,10 +21,10 @@ const App = () => {
           {/* <Hero />
           <StarsCanvas /> */}
         </div>
-        <About />
+        <Works />
         {/* <Experience /> */}
         <Tech />
-        <Works />
+        <About />
         {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
