@@ -14,7 +14,7 @@ import {
   mongodb,
   git,
   figma,
-  docker,
+  linux,
   meta,
   starbucks,
   tesla,
@@ -22,7 +22,7 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
+  docker,
 } from "../assets";
 
 const navLinks = [
@@ -97,8 +97,8 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "docker",
+    icon: docker,
   },
   {
     name: "git",
@@ -109,8 +109,8 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "linux",
+    icon: linux,
   },
 ];
 
