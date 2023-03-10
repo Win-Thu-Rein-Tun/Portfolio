@@ -13,7 +13,7 @@ const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${
         active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
-      } flex items-center justify-center min-w-[80px] h-[500px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
+      } flex items-center justify-center min-w-[80px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
       onClick={() => handleClick(id)}
     >
       <img
@@ -23,7 +23,7 @@ const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
       />
       {active !== id ? (
         <div className="absolute items-center bottom-0 lg:h-[150px] h-[0] p-8 flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-          <h3 className="font-semibold sm:text-[20px] text-[18px] text-white absolute z-0 lg:bottom-10 lg:rotate-[-90deg] lg:origin-[0,0]">
+          <h3 className="font-semibold sm:text-[20px] text-[18px] text-white absolute z-0 lg:bottom-10 bottom-3.5 lg:rotate-[-90deg] lg:origin-[0,0]">
             {title}
           </h3>
         </div>
@@ -79,7 +79,7 @@ const Works = () => {
           </motion.p>
         </div>
 
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[50vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
