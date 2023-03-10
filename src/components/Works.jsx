@@ -13,7 +13,7 @@ const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${
         active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
-      } flex items-center justify-center min-w-[80px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
+      } flex items-center justify-center min-w-[80px] h-[500px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
       onClick={() => handleClick(id)}
     >
       <img
@@ -73,13 +73,13 @@ const Works = () => {
           >
             Following projects showcases my skills and experience through
             real-world examples of my work. Each project is briefly described
-            with links to code repositories and live demos in it. It reflects my
-            ability to solve complex problems, work with different technologies,
-            and manage projects effectively.
+            with links to code repositories and live demos in it. Interested in
+            working together? We should queue up a time to chat. I'll buy the
+            coffee.
           </motion.p>
         </div>
 
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[50vh] gap-5">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
@@ -95,4 +95,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");
