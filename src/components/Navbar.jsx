@@ -71,7 +71,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } absolute black-gradient top-20 right-0 p-6 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+            } absolute glassmorphism top-20 right-0 p-6 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           >
             <ul className="list-none flex flex-col justify-end items-start gap-4">
               {navLinks.map((link) => (

@@ -18,8 +18,10 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
     "react-tilt": "^0.1.4",
+    "react-tsparticles": "^2.9.3",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.150.1",
+    "tsparticles": "^2.9.3",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {

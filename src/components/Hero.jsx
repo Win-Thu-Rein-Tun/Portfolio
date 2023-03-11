@@ -26,7 +26,7 @@ const Hero = () => {
             </span>
             <span className="own-text-gradient ss:hidden">S.D.S</span>
           </h1>
-          <p className={`${styles.heroSubText} md:max-w-md sm:max-w-sm`}>
+          <div className={`${styles.heroSubText} md:max-w-md sm:max-w-sm`}>
             <Typewriter
               options={{
                 strings: [
@@ -40,7 +40,7 @@ const Hero = () => {
                 delay: 30,
               }}
             />
-          </p>
+          </div>
         </div>
       </div>
       {/* <ComputersCanvas /> */}

@@ -8,8 +8,9 @@ const Computers = () => {
   const computer = useGLTF("./cyberpunk_laptop/scene.gltf");
   return (
     <mesh>
+      <ambientLight intensity={0.6} />
       <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1} />
+      <pointLight intensity={3} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -20,7 +21,7 @@ const Computers = () => {
       />
       <primitive
         object={computer.scene}
-        scale={2.2}
+        scale={2.1}
         position={[1, -1, 0]}
         rotation={[1.06, -1, 1]}
       />
