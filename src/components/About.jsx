@@ -25,10 +25,8 @@ const About = () => {
         If you ask me a question, I don't know the answer I'm gonna tell you
         that I don't know but I bet you what I know how to find the answer and I
         will find the answer. I'm a web developer with experience in Html, CSS,
-        JavaScript, and expertise in frameworks like React, Tailwind. I'm a
-        quick learner and collaborate closely with clients to create efficient,
-        scalable, and user-friendly solutions that solve real-world problems.
-        Let's work together to bring your ideas to life!
+        JavaScript, and expertise in frameworks like React, Tailwind. Let's work
+        together to bring your ideas to life!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
