@@ -43,7 +43,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="font-bold text-[18px] text-white cursro-pointer">
+          <p className="font-bold text-[18px] text-white cursor-pointer">
             S.D.S &nbsp;|<span className="own-text-gradient"> Sun D Shine</span>
           </p>
         </Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
                   key={link.id}
                   className={`
                 ${
-                  active === link.title ? "text-greeny" : "text-secondary"
+                  active === link.title ? "text-greeny" : "text-white"
                 } text-[16px] font-medium font-poppins cursor-pointer`}
                   onClick={() => {
                     setToggle(!toggle);
