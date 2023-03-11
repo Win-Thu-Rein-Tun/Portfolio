@@ -2,15 +2,15 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { useAlert } from "react-alert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { styles } from "../styles";
-import { ComputersCanvas, EarthCanvas } from "./canvas";
+import { ComputersCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-  const alert = useAlert();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -49,8 +49,18 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert.success(
-            "Thank you. I will get back to you as soon as possible."
+          toast.success(
+            "Thank you. I will get back to you as soon as possible.",
+            {
+              position: "top-center",
+              autoClose: 10000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            }
           );
 
           setForm({
@@ -63,7 +73,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert.error("Ahh, something went wrong. Please try again.");
+          toast.error("Ahh, something went wrong. Please try again.");
         }
       );
   };
@@ -136,6 +146,18 @@ const Contact = () => {
         {/* <EarthCanvas /> */}
         <ComputersCanvas />
       </motion.div>
+      <ToastContainer
+        position="top-center"
+        autoClose={10000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
