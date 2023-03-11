@@ -8,7 +8,7 @@ const Computers = () => {
   const computer = useGLTF("./cyberpunk_laptop/scene.gltf");
   return (
     <mesh>
-      <ambientLight intensity={0.6} />
+      <ambientLight intensity={1.2} />
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={3} />
       <spotLight

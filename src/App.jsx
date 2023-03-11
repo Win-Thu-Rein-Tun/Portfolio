@@ -18,17 +18,23 @@ import {
 
 const AlertTemplate = ({ style, options, message, close }) => (
   <div style={style}>
-    {options.type === "info" && "!"}
-    {options.type === "success" && ":)"}
-    {options.type === "error" && ":("}
+    {options.type === "info" && "❗"}
+    {options.type === "success" && "😍"}
+    {options.type === "error" && "❌"}
     {message}
+    <button onClick={close}>X</button>
   </div>
 );
+
+const options = {
+  timeout: 5000,
+  position: positions.BOTTOM_CENTER,
+};
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Provider template={AlertTemplate}>
+      <Provider template={AlertTemplate} {...options}>
         <div>
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center relative z-[1]">
             <Navbar />
