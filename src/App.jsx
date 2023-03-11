@@ -28,7 +28,7 @@ const App = () => {
         <About />
         {/* <Feedbacks /> */}
         <Contact />
-        {/* <Particlesbg /> */}
+        <Particlesbg />
       </div>
     </BrowserRouter>
   );

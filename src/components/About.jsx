@@ -56,7 +56,7 @@ const ServiceCard = ({ index, title, icon }) => {
         }}
         className="glassmorphism2 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+        <img src={icon} alt={title} className="w-40 h-40 object-contain" />
         <h3 className="own-text-gradient text-[22px] font-bold text-center">
           {title}
         </h3>

@@ -29,7 +29,6 @@ const TechCards = ({ imgUrl, name, index }) => {
       viewport={{ once: false }}
     >
       <img id="tech" src={imgUrl} alt={name} />
-      <div className="hole" />
     </motion.div>
   );
 };
