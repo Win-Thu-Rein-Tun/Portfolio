@@ -19,15 +19,15 @@ const App = () => {
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center relative z-[1]">
         <Navbar />
         <Hero />
-        {/* <StarsCanvas /> */}
+        <StarsCanvas />
       </div>
       <Works />
 
-      {/* <Tech />
+      <Tech />
       <About />
-      
+
       <Contact />
-      <Particlesbg /> */}
+      <Particlesbg />
     </BrowserRouter>
   );
 };

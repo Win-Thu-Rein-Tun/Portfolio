@@ -201,21 +201,21 @@ const testimonials = [
 const projects = [
   {
     id: "project-1",
-    imgUrl: hoobank,
+    imgUrl: metaverse,
     tags: [
       {
-        name: "react",
+        name: "nextjs",
       },
       {
-        name: "vite",
+        name: "framermotion",
       },
       {
         name: "tailwind",
       },
     ],
-    title: "Hoo Bank",
-    repoLink: "https://github.com/Win-Thu-Rein-Tun/my-first-react-website",
-    demoLink: "https://sun-d-shine-modern-payment.netlify.app/",
+    title: "Meta Madness",
+    repoLink: "https://github.com/Win-Thu-Rein-Tun/first-nextjs-site",
+    demoLink: "https://metaverse-madness-rouge.vercel.app/",
   },
   {
     id: "project-2",
@@ -237,21 +237,21 @@ const projects = [
   },
   {
     id: "project-3",
-    imgUrl: metaverse,
+    imgUrl: hoobank,
     tags: [
       {
-        name: "nextjs",
+        name: "react",
       },
       {
-        name: "framermotion",
+        name: "vite",
       },
       {
         name: "tailwind",
       },
     ],
-    title: "Meta Madness",
-    repoLink: "https://github.com/Win-Thu-Rein-Tun/first-nextjs-site",
-    demoLink: "https://metaverse-madness-rouge.vercel.app/",
+    title: "Hoo Bank",
+    repoLink: "https://github.com/Win-Thu-Rein-Tun/my-first-react-website",
+    demoLink: "https://sun-d-shine-modern-payment.netlify.app/",
   },
   {
     id: "project-4",
