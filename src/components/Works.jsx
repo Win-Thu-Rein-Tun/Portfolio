@@ -32,7 +32,7 @@ const ProjectCard = ({
         className="absolute w-full h-full object-cover rounded-[24px]"
       />
       {active !== id ? (
-        <div className="absolute items-center bottom-0 lg:h-[200px] h-[0] p-[26.8px] flex w-full flex-col bg-[rgba(0,0,0,0.5)] lg:rounded-b-[24px] lg:rounded-[0px] rounded-[24px]">
+        <div className="absolute items-center bottom-0 lg:h-[200px] h-[0] p-[25px] flex w-full flex-col bg-[rgba(0,0,0,0.5)] lg:rounded-b-[24px] lg:rounded-[0px] rounded-[24px]">
           <h3 className="font-semibold sm:text-[25px] text-[18px] text-white absolute z-0 lg:bottom-10 bottom-3.5 lg:rotate-[-90deg] lg:origin-[0,0]">
             {title}
           </h3>

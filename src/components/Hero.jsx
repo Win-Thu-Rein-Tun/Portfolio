@@ -53,7 +53,7 @@ const Hero = () => {
       </div> */}
       <BallCanvas icon={me} />
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-[2]">
+      <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center z-[2]">
         <a href="#work">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-greeny flex justify-center items-start p-2 ">
             <motion.div
