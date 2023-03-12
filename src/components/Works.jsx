@@ -7,13 +7,21 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 
-const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
+const ProjectCard = ({
+  id,
+  imgUrl,
+  title,
+  index,
+  active,
+  handleClick,
+  tags,
+}) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${
         active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
-      } flex items-center justify-center min-w-[80px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
+      } flex items-center justify-center min-w-[80px] md:h-[500px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
       onClick={() => handleClick(id)}
     >
       <img
@@ -22,8 +30,8 @@ const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
         className="absolute w-full h-full object-cover rounded-[24px]"
       />
       {active !== id ? (
-        <div className="absolute items-center bottom-0 lg:h-[150px] h-[0] p-8 flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-          <h3 className="font-semibold sm:text-[20px] text-[18px] text-white absolute z-0 lg:bottom-10 bottom-3.5 lg:rotate-[-90deg] lg:origin-[0,0]">
+        <div className="absolute items-center bottom-0 lg:h-[200px] h-[0] p-[26.5px] flex w-full flex-col bg-[rgba(0,0,0,0.5)] md:rounded-b-[24px] md:rounded-[0px] rounded-[24px]">
+          <h3 className="font-semibold sm:text-[25px] text-[18px] text-white absolute z-0 lg:bottom-10 bottom-3.5 lg:rotate-[-90deg] lg:origin-[0,0]">
             {title}
           </h3>
         </div>
@@ -38,10 +46,20 @@ const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => {
               className="w-1/2 h-1/2 object-contain"
             />
           </div>
-          <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
+          {/* <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
             Enter Metaverse
-          </p>
-          <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+          </p> */}
+          <div className="flex flex-wrap gap-1">
+            {tags.map((tag, index) => (
+              <p
+                key={index}
+                className="font-normal text-[16px] text-white uppercase"
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+          <h2 className="font-semibold sm:text-[32px] text-[24px] text-white">
             {title}
           </h2>
         </div>
@@ -81,7 +99,7 @@ const Works = () => {
           </motion.p>
         </div>
 
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col md:min-h-[50vh] min-h-[70vh] gap-5 glassmorphism2 rounded-2xl py-4 px-4">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}

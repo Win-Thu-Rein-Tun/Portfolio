@@ -19,10 +19,12 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
   jobit,
-  tripguide,
   docker,
+  hoobank,
+  metaverse,
+  portfolio,
+  reactnative,
 } from "../assets";
 
 const navLinks = [
@@ -199,28 +201,86 @@ const testimonials = [
 const projects = [
   {
     id: "project-1",
-    imgUrl: jobit,
-    title: "The Hogwarts",
+    imgUrl: hoobank,
+    tags: [
+      {
+        name: "react",
+      },
+      {
+        name: "vite",
+      },
+      {
+        name: "tailwind",
+      },
+    ],
+    title: "Hoo Bank",
   },
   {
     id: "project-2",
-    imgUrl: carrent,
-    title: "The Upside Down",
+    imgUrl: jobit,
+    tags: [
+      {
+        name: "react",
+      },
+      {
+        name: "vite",
+      },
+      {
+        name: "tailwind",
+      },
+    ],
+    title: "Job Search",
   },
   {
     id: "project-3",
-    imgUrl: tripguide,
-    title: "Kadirojo Permai",
+    imgUrl: metaverse,
+    tags: [
+      {
+        name: "nextjs",
+      },
+      {
+        name: "framermotion",
+      },
+      {
+        name: "tailwind",
+      },
+    ],
+    title: "Meta Madness",
   },
   {
     id: "project-4",
-    imgUrl: jobit,
-    title: "Paradise Island",
+    imgUrl: portfolio,
+    tags: [
+      {
+        name: "react",
+      },
+      {
+        name: "threejs",
+      },
+      {
+        name: "framermotin",
+      },
+      {
+        name: "tailwind",
+      },
+    ],
+    title: "3D Portfolio",
   },
   {
     id: "project-5",
-    imgUrl: carrent,
-    title: "Hawkins Labs",
+    imgUrl: reactnative,
+    tags: [
+      {
+        name: "reactnative",
+      },
+      {
+        name: "expo",
+      },
+      {
+        name: "tailwind",
+      },
+    ],
+    title: "React Native",
   },
 ];
 

@@ -26,9 +26,11 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
+import hoobank from "./hoobank.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import metaverse from "./metaverse.png";
+import portfolio from "./portfolio.png";
+import reactnative from "./reactnative.png";
 
 import me from "./me.png";
 
@@ -59,7 +61,9 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
+  hoobank,
   jobit,
-  tripguide,
+  metaverse,
+  portfolio,
+  reactnative,
 };
