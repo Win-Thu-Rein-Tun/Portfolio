@@ -18,16 +18,16 @@ const App = () => {
     <BrowserRouter>
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center relative z-[1]">
         <Navbar />
-        <Hero />
-        <StarsCanvas />
+        {/* <Hero />
+        <StarsCanvas /> */}
       </div>
       <Works />
-      {/* <Experience /> */}
-      <Tech />
+      
+      {/* <Tech />
       <About />
-      {/* <Feedbacks /> */}
+      
       <Contact />
-      <Particlesbg />
+      <Particlesbg /> */}
     </BrowserRouter>
   );
 };

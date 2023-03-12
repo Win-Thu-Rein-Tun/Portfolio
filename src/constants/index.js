@@ -214,6 +214,8 @@ const projects = [
       },
     ],
     title: "Hoo Bank",
+    repoLink: "https://github.com/Win-Thu-Rein-Tun/my-first-react-website",
+    demoLink: "https://sun-d-shine-modern-payment.netlify.app/",
   },
   {
     id: "project-2",
@@ -230,6 +232,8 @@ const projects = [
       },
     ],
     title: "Job Search",
+    repoLink: "https://github.com/Win-Thu-Rein-Tun/badcode-react",
+    demoLink: "https://jobsearch-no-reponsive-react-bad-code.netlify.app/",
   },
   {
     id: "project-3",
@@ -246,6 +250,8 @@ const projects = [
       },
     ],
     title: "Meta Madness",
+    repoLink: "https://github.com/Win-Thu-Rein-Tun/first-nextjs-site",
+    demoLink: "https://metaverse-madness-rouge.vercel.app/",
   },
   {
     id: "project-4",
@@ -265,6 +271,8 @@ const projects = [
       },
     ],
     title: "3D Portfolio",
+    repoLink: "https://github.com/Win-Thu-Rein-Tun/3d-portfolio",
+    demoLink: "https://3d-portfolio-sun-d-shine-site.netlify.app/",
   },
   {
     id: "project-5",
@@ -281,6 +289,9 @@ const projects = [
       },
     ],
     title: "React Native",
+    repoLink:
+      "https://github.com/Win-Thu-Rein-Tun/react-native-app-showcase-website",
+    demoLink: "https://nfts-react-native-app-showcase.netlify.app/",
   },
 ];
 
