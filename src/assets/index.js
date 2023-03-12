@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import backend from "./backend.png";
-import creator from "./creator.png";
+import quicklearner from "./quicklearner.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
@@ -21,11 +21,6 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import docker from "./tech/docker.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
 import hoobank from "./hoobank.png";
 import jobit from "./jobit.png";
 import metaverse from "./metaverse.png";
@@ -38,7 +33,7 @@ export {
   me,
   logo,
   backend,
-  creator,
+  quicklearner,
   mobile,
   web,
   github,
@@ -57,10 +52,6 @@ export {
   tailwind,
   typescript,
   docker,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   hoobank,
   jobit,
   metaverse,

@@ -39,9 +39,7 @@ const Contact = () => {
         "template_n0f6wr8",
         {
           to_name: form.name,
-          // to_name: "Sun D Shine",
           from_name: form.email,
-          // to_email: "winthureintun2000@gmail.com",
           message: form.message,
         },
         "lE_8YDXU06Hf8Pz_z"
@@ -143,7 +141,6 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] glassmorphism2 rounded-2xl"
       >
-        {/* <EarthCanvas /> */}
         <ComputersCanvas />
       </motion.div>
       <ToastContainer

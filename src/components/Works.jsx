@@ -58,9 +58,6 @@ const ProjectCard = ({
             </button>
           </div>
 
-          {/* <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
-            Enter Metaverse
-          </p> */}
           <div className="flex flex-wrap gap-1">
             {tags.map((tag, index) => (
               <p

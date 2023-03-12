@@ -4,8 +4,6 @@ import { styles } from "../styles";
 import Typewriter from "typewriter-effect";
 import { BallCanvas } from "./canvas";
 import { me } from "../assets";
-import { technologies } from "../constants";
-import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
@@ -43,14 +41,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <ComputersCanvas /> */}
-      {/* <div className="flex flex-row flex-wrap gap-10 justify-center">
-        {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
-        ))}
-      </div> */}
       <BallCanvas icon={me} />
 
       <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center z-[2]">
