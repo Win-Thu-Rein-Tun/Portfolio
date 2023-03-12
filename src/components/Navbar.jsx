@@ -44,7 +44,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="font-bold text-[18px] text-white cursor-pointer">
-            S.D.S &nbsp;|<span className="own-text-gradient"> Sun D Shine</span>
+            S.D.S &nbsp;|<span className="own-text-gradient"> Shine D Sun</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">

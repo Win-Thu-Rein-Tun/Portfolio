@@ -22,7 +22,7 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} mt-2 text-white-100`}>
             Hi, I'm&nbsp;
             <span className="own-text-gradient hidden ss:inline-block">
-              Sun D Shine
+              Shine D Sun
             </span>
             <span className="own-text-gradient ss:hidden">S.D.S</span>
           </h1>
